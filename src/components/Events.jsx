@@ -22,7 +22,7 @@ import video7 from "../Landing_assets/Landing_media/spacerealastro.mov"
 
 
 const Events = () => {
-    const navigate = useNavigate();
+    
   return (
     <>
     <div className="eventsbg">
