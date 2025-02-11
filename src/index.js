@@ -1,16 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import Landingm from './components/Landing';
-import MyComponent from './Landing_assets/scrolleffect';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./index.css";
+import Landing from "./components/Landing.jsx";
+import Events from "./components/Events.jsx";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <>
-    <Landingm />
-    
-</>
-  
+  <React.StrictMode>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
 );
-
